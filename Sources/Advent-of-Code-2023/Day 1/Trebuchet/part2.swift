@@ -81,6 +81,16 @@ private func lookForNum(
         case .backward: return limit <= index
         }
     }
+
+    let mapDigitString = { (value: String) -> String in
+        let digit: String?
+        switch direction {
+        case .forward: digit = stringToDigitString[value]
+        case .backward: digit = stringToDigitString[String(value.reversed())]
+        }
+        guard let digit else { fatalError("Value \(value) is not a valid digit string") }
+        return digit
+    }
     
     var node: TrieNode?
     var stack = [(node: TrieNode, index: Int)]()
@@ -100,9 +110,9 @@ private func lookForNum(
             index = backtrackIndex
         }
 
-        if let value = node?.terminatingValue, 
-            let digitString = stringToDigitString[value] ?? stringToDigitString[String(value.reversed())] {
-            return (digitString: digitString, index: index)
+        if let value = node?.terminatingValue {
+            let digit = mapDigitString(value)
+            return (digitString: digit, index: index)
         }
 
         index += direction.increment
