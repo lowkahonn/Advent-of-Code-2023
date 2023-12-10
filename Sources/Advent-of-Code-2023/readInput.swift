@@ -3,17 +3,19 @@ import Foundation
 enum InputFile: String {
     case trebuchet
     case cubeConundrum
+    case gearRatios
 
     var name: String { self.rawValue + ".txt" }
     var day: Int {
         switch self {
         case .trebuchet: return 1
         case .cubeConundrum: return 2
+        case .gearRatios: return 3
         }
     }
 }
 
-func readInput(fileName: InputFile) -> [Substring] {
+func readInput(_ fileName: InputFile) -> [Substring] {
     let currentDirectoryPath = FileManager.default.currentDirectoryPath
     let url = URL(fileURLWithPath: currentDirectoryPath)
         .appendingPathComponent("Sources")

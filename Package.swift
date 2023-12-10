@@ -20,6 +20,7 @@ let package = Package(
             resources: [
                 .process("Day 1/trebuchet.txt"),
                 .process("Day 2/cubeConundrum.txt"),
+                .process("Day 3/gearRatios.txt"),
             ]
         ),
         .testTarget(

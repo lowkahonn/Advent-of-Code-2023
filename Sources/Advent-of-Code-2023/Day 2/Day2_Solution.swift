@@ -1,5 +1,5 @@
 func solveCubeConundrumPart1() -> Int {
-    let input = readInput(fileName: .cubeConundrum)
+    let input = readInput(.cubeConundrum)
     var sum = 0
     for game in input {
         let bag = parseCubeConundrum(String(game))
@@ -11,7 +11,7 @@ func solveCubeConundrumPart1() -> Int {
 }
 
 func solveCubeConundrumPart2() -> Int {
-    let input = readInput(fileName: .cubeConundrum)
+    let input = readInput(.cubeConundrum)
     var sum = 0
     for game in input {
         let bag = parseCubeConundrum(String(game))
