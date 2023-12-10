@@ -26,7 +26,9 @@ private struct LookupTrie {
     let backwardTrie: Trie
 }
 
-func solveTrebuchetPart2(input: [Substring] = trebuchetInput) -> Int {
+func solveTrebuchetPart2() -> Int {
+    let input = readInput(fileName: .trebuchet)
+
     let forwardTrie = Trie()
     let backwardTrie = Trie()
 

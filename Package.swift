@@ -16,7 +16,12 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .executableTarget(
-            name: "Advent-of-Code-2023"),
+            name: "Advent-of-Code-2023",
+            resources: [
+                .process("Day 1/trebuchet.txt"),
+                .process("Day 2/cubeConundrum.txt"),
+            ]
+        ),
         .testTarget(
             name: "Advent-of-Code-2023Tests",
             dependencies: ["Advent-of-Code-2023"]),

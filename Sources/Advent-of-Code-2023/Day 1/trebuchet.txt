@@ -1,4 +1,3 @@
-let trebuchetInput = """
 dqfournine5four2jmlqcgv
 7ggzdnjxndfive
 twofive4threenine
@@ -999,4 +998,3 @@ sixthree8
 bbdlvtsjhjst88
 dklhhhlpqqxlgdzzheightjntbmlfour4
 ggrbl5cthnzlsbjssixpt
-""".split(separator: "\n")

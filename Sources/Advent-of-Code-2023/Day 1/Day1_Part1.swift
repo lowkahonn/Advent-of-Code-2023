@@ -2,9 +2,9 @@ import Foundation
 
 private let validDigitStrings = Set([1, 2, 3, 4, 5, 6, 7, 8, 9].map { String($0) })
 
-func solveTrebuchetPart1(input: [Substring] = trebuchetInput) -> Int {
+func solveTrebuchetPart1() -> Int {
+    let input = readInput(fileName: .trebuchet)
     var sum = 0
-
     for word in input { 
         let (leftDigitString, leftIndex) = lookForNum(
             direction: .forward, 
